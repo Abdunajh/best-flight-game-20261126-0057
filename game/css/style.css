@@ -1,0 +1,41 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: #0b1622; height: 100%; }
+body {
+  font-family: "Trebuchet MS", "Segoe UI", Verdana, sans-serif;
+  color: #eaf4ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+#stage { position: relative; width: 1280px; height: 720px; max-width: 100vw; max-height: 100vh; }
+#game { display: block; width: 100%; height: 100%; background: #7ec8ee; }
+.panel {
+  position: absolute; inset: 0;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center;
+  background: rgba(8, 24, 40, 0.55);
+  padding: 24px;
+}
+.panel.hidden { display: none; }
+.panel h1 {
+  margin: 0 0 8px 0;
+  font-size: 54px; letter-spacing: 6px;
+  color: #ffd75e;
+  text-shadow: 0 3px 0 #b3541e, 0 6px 18px rgba(0, 0, 0, 0.6);
+}
+.panel .sub { margin: 0 0 18px 0; font-size: 20px; color: #bfe6ff; font-style: italic; }
+.panel .how { margin: 0 0 20px 0; font-size: 17px; line-height: 1.65; color: #eaf4ff; max-width: 640px; }
+.panel .how b { color: #ffd75e; }
+.panel .fine { margin: 18px 0 0 0; font-size: 14px; color: #9fc6e2; }
+.panel button {
+  font-family: inherit; font-size: 22px; font-weight: bold;
+  letter-spacing: 1px;
+  color: #3a2404; background: linear-gradient(#ffe27a, #ffb52e);
+  border: 2px solid #fff3c4; border-radius: 12px;
+  padding: 14px 34px; cursor: pointer;
+  box-shadow: 0 4px 0 #b3541e, 0 8px 20px rgba(0, 0, 0, 0.45);
+}
+.panel button:hover { filter: brightness(1.08); }
+.panel button:active { transform: translateY(3px); box-shadow: 0 1px 0 #b3541e; }

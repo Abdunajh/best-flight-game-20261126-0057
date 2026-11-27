@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Island Hopper — Kestrel Mail Run</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="stage">
+  <canvas id="game" width="1280" height="720"></canvas>
+  <div id="overlay" class="panel">
+    <h1>ISLAND HOPPER</h1>
+    <p class="sub">Kestrel Mail Run &mdash; a seaplane island-hop</p>
+    <p class="how">Fly through every golden ring, then land on the
+    striped runway to deliver the mail and refuel.<br>
+    <b>Up / Down</b> pitch &nbsp;&middot;&nbsp; <b>Left / Right</b> throttle
+    &nbsp;&middot;&nbsp; <b>A / D</b> turn &nbsp;&middot;&nbsp; <b>Space</b> boost &nbsp;&middot;&nbsp; <b>P</b> pause
+    &nbsp;&middot;&nbsp; <b>M</b> sound<br>
+    Mouse: hold the left button to boost. Avoid mountains, storm clouds and the sea.</p>
+    <button id="startBtn" type="button">Start flying</button>
+    <p class="fine">3 lives &middot; fuel runs out &middot; rings score 100 &middot; a clean landing scores 500</p>
+  </div>
+  <div id="pauseOverlay" class="panel hidden">
+    <h1>Paused</h1>
+    <p class="how">Press P or click Resume to keep flying.</p>
+    <button id="resumeBtn" type="button">Resume</button>
+  </div>
+  <div id="overOverlay" class="panel hidden">
+    <h1 id="overTitle">Run over</h1>
+    <p class="how" id="overText"></p>
+    <button id="againBtn" type="button">Fly again</button>
+  </div>
+</div>
+<script src="js/util.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/terrain.js"></script>
+<script src="js/plane.js"></script>
+<script src="js/hud.js"></script>
+<script src="js/game.js"></script>
+</body>
+</html>
